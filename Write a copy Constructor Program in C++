@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+class Student
+{
+ public:
+ string name;
+ int roll;
+ Student(string n, int r)
+ {
+ name = n;
+ roll = r;
+ }
+ Student(const Student &s)
+ {
+ name = s.name;
+ roll = s.roll;
+ }
+};
+int main( )
+{
+ Student s1("Lav Kush", 15);
+ Student s2(s1);
+ cout << "Name : " << s2.name << endl;
+ cout << "Roll No. : " << s2.roll << endl;
+ return 0;
+}
