@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+class First
+{
+	public:
+		string name="Nivas";
+		void display()
+		{
+			cout<<name;
+		}
+};
+int main()
+{
+	First obj;
+	obj.display();
+	return 0;
+}
