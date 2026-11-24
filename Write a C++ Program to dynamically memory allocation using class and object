@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class First
+{
+	public:
+		string name="Nivas";
+		void display()
+		{
+			cout<<name;
+		}
+};
+int main()
+{
+	First *obj=new First;
+	obj->display();
+	
+	// cout<<obj; //for print address
+	// delete obj; //for delete data
+	
+	obj=nullptr;
+	return 0;
+}
