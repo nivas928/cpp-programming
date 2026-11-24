@@ -13,7 +13,7 @@ class Student
 };
 int main( )
 {
- Student s1("Lav Kush", 15);
+ Student s1("Nivas", 18);
  cout << "Name : " << s1.name << endl;
  cout << "Roll No. : " << s1.roll << endl;
  return 0;
