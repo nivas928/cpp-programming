@@ -1,0 +1,31 @@
+mple,
+#include<iostream>
+using namespace std;
+class OperatorDemo
+{
+public:
+int a;
+void getData(int a)
+{
+this->a = a;
+}
+OperatorDemo operator +(OperatorDemo obj)
+{
+OperatorDemo temp;
+temp.a = a + obj.a;
+return temp;
+}
+void display()
+{
+cout << "A = " << a << endl;
+}
+};
+int main( )
+{
+OperatorDemo obj1, obj2, obj3;
+obj1.getData(10);
+obj2.getData(20);
+obj3 = obj1+obj2;
+obj3.display( );
+return 0;
+}
