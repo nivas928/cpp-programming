@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class DivideByZero:public exception
+{
+	public:
+		const char*what()const noexcept override
+		{
+			return"can't divide by zero";
+		}
+		void div()
+		{
+			int a,b;
+			cout<<"enter first no:";
+			cin>>a;
+			cout<<"enter second no:";
+			cin>>b;
+			try
+			{
+				if(b==0)
+				{
+					throw DivideByZero();
+				}
+				else
+				{
+					cout<<a/b;
+				}
+			}
+			catch(const DivideByZero &b)
+			{
+				cout<<b.what();
+			}
+		}
+};
+int main()
+{
+	DivideByZero d;
+	d.div();
+	return 0;
+}
