@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class DivideByZero
+{
+	public:
+		void div()
+		{
+			int a,b;
+			cout<<"enter first no:";
+			cin>>a;
+			cout<<"enter second no:";
+			cin>>b;
+			try
+			{
+				if(b==0)
+				{
+					throw b;
+				}
+				else
+				{
+					cout<<a/b;
+				}
+			}
+			catch(int b)
+			{
+				cout<<"can't divide by zero";
+			}
+		}
+};
+int main()
+{
+	DivideByZero d;
+	d.div();
+	return 0;
+}
